@@ -1,0 +1,73 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">outlook-triage</title>
+  <desc id="desc">Read-only Microsoft 365 / Outlook mail triage for AI agents — classifies mail into security, urgent, important, personal, updates, and ads, with an opencode skill.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1b26"/>
+      <stop offset="100%" stop-color="#0f1020"/>
+    </linearGradient>
+    <linearGradient id="olgrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#28A8EA"/>
+      <stop offset="100%" stop-color="#0A5B9E"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1120" cy="120" r="260" fill="#28A8EA" opacity="0.06"/>
+  <circle cx="140" cy="560" r="300" fill="#0A5B9E" opacity="0.08"/>
+
+  <!-- Outlook-style envelope logo -->
+  <g transform="translate(205,150) scale(1.5)" filter="url(#glow)">
+    <rect x="0" y="0" width="160" height="112" rx="16" fill="url(#olgrad)"/>
+    <path d="M0 16 C0 7 7 0 16 0 L144 0 C153 0 160 7 160 16 L160 22 L80 74 L0 22 Z" fill="#0A5B9E" opacity="0.85"/>
+    <rect x="26" y="26" width="16" height="62" rx="4" fill="#ffffff"/>
+    <rect x="96" y="26" width="16" height="62" rx="4" fill="#ffffff"/>
+    <rect x="26" y="26" width="86" height="16" rx="4" fill="#ffffff"/>
+  </g>
+
+  <!-- title -->
+  <text x="450" y="220" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#ffffff">outlook<span fill="#28A8EA">-</span><tspan fill="#28A8EA">triage</tspan></text>
+
+  <text x="452" y="278" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#a9b1d6">
+    Read-only Microsoft 365 / Outlook classification for AI agents
+  </text>
+
+  <!-- category pills -->
+  <g transform="translate(450,360)" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="600">
+    <rect x="0"   y="0"  width="150" height="52" rx="26" fill="#F28C28" opacity="0.92"/>
+    <text x="75" y="34" text-anchor="middle" fill="#1a1b26">security</text>
+
+    <rect x="165" y="0"  width="130" height="52" rx="26" fill="#F5365C" opacity="0.92"/>
+    <text x="230" y="34" text-anchor="middle" fill="#1a1b26">urgent</text>
+
+    <rect x="310" y="0"  width="160" height="52" rx="26" fill="#4C8BF5" opacity="0.92"/>
+    <text x="390" y="34" text-anchor="middle" fill="#ffffff">important</text>
+
+    <rect x="485" y="0"  width="150" height="52" rx="26" fill="#5E8B7E" opacity="0.92"/>
+    <text x="560" y="34" text-anchor="middle" fill="#ffffff">personal</text>
+
+    <rect x="650" y="0"  width="145" height="52" rx="26" fill="#7F8DA4" opacity="0.92"/>
+    <text x="722" y="34" text-anchor="middle" fill="#ffffff">updates</text>
+
+    <rect x="0"   y="68" width="115" height="52" rx="26" fill="#7D5BA6" opacity="0.92"/>
+    <text x="57"  y="102" text-anchor="middle" fill="#ffffff">ads</text>
+
+    <rect x="130" y="68" width="110" height="52" rx="26" fill="#4b4f5e" opacity="0.92"/>
+    <text x="185" y="102" text-anchor="middle" fill="#cdd3e6">other</text>
+  </g>
+
+  <text x="450" y="560" font-family="Segoe UI, Consolas, monospace" font-size="26" fill="#28A8EA">
+    $ outlook-triage classify --hours 24 --json
+  </text>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#565f89">
+    <text x="450" y="610">hybrid rules + LLM</text>
+    <text x="660" y="610">CLI + skill</text>
+    <text x="800" y="610">any agent harness</text>
+  </g>
+</svg>
