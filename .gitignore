@@ -1,0 +1,7 @@
+.outlook-triage/
+credentials.json
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
